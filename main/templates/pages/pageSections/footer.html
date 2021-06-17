@@ -1,0 +1,37 @@
+{% load static %}
+<footer class="footer">
+  <img
+    class="footer_top_stripe"
+    src="{%static '/assets/footer_stripe.svg'%}"
+    alt=""
+    srcset=""
+  />
+  <div class="footer_content">
+    <div class="social">
+      <ul>
+        <li class="facebook"></li>
+        <li class="youtube"></li>
+        <li class="instagram"></li>
+      </ul>
+    </div>
+
+    <div class="nav_links text_white">
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <span>|</span>
+        <li><a href="#">Gallery</a></li>
+        <span>|</span>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <span>|</span>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="dev_credit">
+    <div class="dev text_white">
+      <span class="title">Designed And Developed By:</span>
+      <a class="name" href="#">Udoy Rahman</a>
+    </div>
+    <div class="copyright"></div>
+  </div>
+</footer>

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <header class="topbar_container">
+      
+        {% include 'pages/pageSections/navbar.html' %}
+    </header>
+    <main>
+      <div class="about_banner bg_white">
+        <div class="about_banner_container">
+          <div class="about_banner_image_container">
+            <img src="{% static '/assets/about_us_banner.png'%}" alt="About" />
+          </div>
+          <div class="banner_text text_black">
+            <div>
+              <h1>Lorem ipsum</h1>
+              <h1>Lorem ipsum dolor sit amet</h1>
+              <p class="mt_1 mb_2">
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo conseq Duis aute irure dolor in reprehenderit in
+                voluptate vel cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint o cupidatat non proident, sunt in culpa qui officia deser
+              </p>
+              <span class="bg_green text_white">Join Us</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shobhapoti bg_violate">
+        <div class="shobhapoti_container">
+          <div class="shobhapoti_image">
+            <img src="{{shobhapoti.profile_pic.url}}"  alt="Shobhapoti" />
+          </div>
+          <div class="shobhapoti_content text_white">
+            <h1>{{shobhapoti.full_name}}</h1>
+            <p>
+              {{shobhapoti.quotation}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="group_committee">
+        <h1 class="text_black">Group Committee</h1>
+        <div class="committee_member_container">
+          {% for committe in committe_members %}
+            <div class="committee_member">
+              <div class="committee_member_image">
+                <img src="{{ committe.profile_pic.url}}" alt="Group Committe cure" />
+              </div>
+              <div class="committee_member_content">
+                <p class="member_name text_black">{{ committe.full_name }}</p>
+                <p class="member_designation">{{ committe.designation }}</p>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+    </main>
+{% include 'pages/pageSections/footer.html' %}{% endblock content %}

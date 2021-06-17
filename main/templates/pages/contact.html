@@ -1,0 +1,113 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<header class="topbar_container">
+  {% include 'pages/pageSections/navbar.html' %}
+  <div class="heading">
+    <h3>Contact Us</h3>
+  </div>
+</header>
+<!-- main body -->
+<main>
+  <div class="contact">
+    <div class="contact_container">
+      <div class="contact_content text_black">
+        <!-- text -->
+        <h1 class="">Want to join us?</h1>
+        <ul>
+          <li>
+            <svg
+              width="43"
+              height="43"
+              viewBox="0 0 43 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="21.5" cy="21.5" r="21.5" fill="#03C9B3" />
+              <circle cx="21.5007" cy="21.5" r="15.8088" fill="#00B29E" />
+            </svg>
+            <span>Lorem ipsum dolor sit amet, consectetur</span>
+          </li>
+          <li>
+            <svg
+              width="43"
+              height="43"
+              viewBox="0 0 43 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="21.5" cy="21.5" r="21.5" fill="#03C9B3" />
+              <circle cx="21.5007" cy="21.5" r="15.8088" fill="#00B29E" />
+            </svg>
+            <span>Lorem ipsum dolor sit amet, consectetur</span>
+          </li>
+          <li>
+            <svg
+              width="43"
+              height="43"
+              viewBox="0 0 43 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="21.5" cy="21.5" r="21.5" fill="#03C9B3" />
+              <circle cx="21.5007" cy="21.5" r="15.8088" fill="#00B29E" />
+            </svg>
+            <span>Lorem ipsum dolor sit amet, consectetur</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contact_form text_black">
+        <div class="contact_form_heading">
+          <h1>Contact US</h1>
+        </div>
+        <div class="contact_form_container">
+          <div class="contact_left_sidebar bg_violate">
+            <h3 class="text_white">Contact Us</h3>
+            <div class="label_container text_white">
+              <ul>
+                <li><i class="fas fa-user"></i> <span>Name</span></li>
+                <li><i class="fas fa-envelope"></i> <span>Email</span></li>
+                <li>
+                  <i class="fas fa-comment-dots"></i> <span>Message</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact_right_form">
+            <div class="contact_right_form_heading">
+              <h2 class="text_black">Get in touch</h2>
+              <p class="text_green">Please fill the form below</p>
+            </div>
+            <form action="{% url 'contact'%}" method="POST">
+              {% csrf_token %}
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                class="contact_form_input"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="contact_form_input"
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+              ></textarea>
+              <input
+                type="submit"
+                class="contact_form_button bg_green text_white btn_hover_splash"
+                value="Submit"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include 'pages/pageSections/footer.html' %}{% endblock content %}

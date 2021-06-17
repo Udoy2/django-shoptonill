@@ -1,0 +1,53 @@
+{% load static %}
+<nav>
+  <div class="nav_container">
+    <div class="brand">
+      <a href="{% url 'home' %}" class="nav_logo">
+        <img
+          src="{% static '/assets/brand.jpg' %}"
+          alt="Shoptonill Mukto Mohadol"
+        />
+        <span class="text_white">Shoptonill Mukto Mohadol</span>
+      </a>
+    </div>
+    <div class="navbar_nav">
+      <ul class="text_white">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li class=""><a href="{% url 'about' %}">About</a></li>
+        <li class=""><a href="{% url 'contact' %}">Contact Us</a></li>
+        <a href="#" class="nav_btn btn_white text_violate"
+          ><small>Find out</small></a
+        >
+      </ul>
+    </div>
+    <div class="sidebar_toggle_button">
+      <i
+        class="fas fa-bars"
+        onclick="document.getElementById('sidebar').classList.toggle('sidebar_close_state')"
+      ></i>
+    </div>
+  </div>
+</nav>
+<div class="sidebar sidebar_close_state" id="sidebar">
+  <div class="sidebar_brand_heading">
+    <div class="sidebar_brand">
+      <h3 class="text_white">Shoptonill Mukto Mohadol</h3>
+    </div>
+    <div class="sidebar_cross_toggle">
+      <i
+        class="fas fa-times text_white"
+        onclick="document.getElementById('sidebar').classList.toggle('sidebar_close_state')"
+      ></i>
+    </div>
+  </div>
+  <div class="sidebar_content">
+    <ul class="text_white">
+      <a href="{% url 'home' %}"><li>Home</li></a>
+      <a href="#"><li>Gallery</li></a>
+      <a href="{% url 'about' %}"><li class="">About</li></a>
+      <a href="{% url 'contact' %}"><li class="">Contact Us</li></a>
+    </ul>
+  </div>
+  <div class="sidebar_footer"></div>
+</div>

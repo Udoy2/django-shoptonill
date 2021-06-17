@@ -1,0 +1,240 @@
+.contact {
+  margin-top: -60px;
+}
+.contact .contact_container {
+  display: flex;
+  align-items: center;
+  width: 98%;
+  margin: auto;
+}
+
+.contact .contact_container .contact_content {
+  flex: 1;
+  margin-left: 1rem;
+}
+.contact .contact_container .contact_content ul li {
+  list-style: none;
+  margin-top: 1rem;
+}
+.contact .contact_container .contact_content ul li span {
+  display: inline-block;
+  width: 300px;
+  margin-left: 10px;
+}
+
+.contact .contact_container .contact_form {
+  flex: 2;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact_container .contact_form .contact_form_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: var(--main-body-color);
+  text-align: center;
+}
+
+.contact .contact_container .contact_form .contact_form_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contact_form .contact_form_container .contact_left_sidebar {
+  height: 560px;
+  width: 400px;
+  margin-left: -10%;
+}
+
+.contact_form .contact_form_container .contact_left_sidebar ul li {
+  list-style: none;
+  margin-top: 3rem;
+}
+
+.contact_form .contact_form_container .contact_left_sidebar ul li svg {
+  height: 30px;
+}
+.contact_form .contact_form_container .contact_left_sidebar ul li span {
+  margin-bottom: 5px;
+}
+
+.contact_form_container .contact_left_sidebar .label_container {
+  width: 250px;
+  margin: auto;
+  margin-top: 3rem;
+}
+.contact_form_container .contact_left_sidebar h3 {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: "Rasa", serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+.contact_container .contact_form .contact_form_container .contact_right_form {
+  flex: 2;
+  padding: 20px;
+  padding-left: 3rem;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.contact_container
+  .contact_form
+  .contact_form_container
+  .contact_right_form
+  > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_container
+  .contact_form
+  .contact_form_container
+  .contact_right_form
+  > form
+  .contact_form_input {
+  margin-top: 2rem;
+  border: none;
+  background: var(--main-body-color);
+  padding: 15px 15px;
+  color: #8f8f8f;
+}
+.contact_container
+  .contact_form
+  .contact_form_container
+  .contact_right_form
+  > form
+  .contact_form_input:focus {
+  outline: none;
+}
+
+.contact_container
+  .contact_form
+  .contact_form_container
+  .contact_right_form
+  > form
+  textarea {
+  margin-top: 2rem;
+  border: none;
+  background: var(--main-body-color);
+  padding: 15px 15px;
+  height: 230px;
+  color: #8f8f8f;
+  resize: none;
+}
+.contact_container
+  .contact_form
+  .contact_form_container
+  .contact_right_form
+  > form
+  textarea:focus {
+  outline: none;
+}
+
+.contact_container
+  .contact_form
+  .contact_form_container
+  .contact_right_form
+  > form
+  .contact_form_button {
+  margin-top: 2rem;
+  padding: 0.7rem 0rem;
+  border: none;
+  font-family: "Rasa", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.label_container ul li span {
+  font-family: "Rasa", serif;
+  font-size: 25px;
+  margin-right: 15px;
+}
+.label_container ul li i {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+/* Desktop Wide: */
+@media screen and (min-width: 1170px) {
+  /* your code here */
+}
+
+/* Desktop: */
+@media screen and (max-width: 1169px) and (min-width: 992px) {
+  .contact .contact_container {
+    width: 100%;
+  }
+}
+
+/* Tablet Wide: */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  /* your code here */
+  .contact {
+    margin-top: 3rem;
+  }
+  .contact .contact_container {
+    width: 100%;
+  }
+  .contact .contact_container .contact_content {
+    display: none;
+  }
+  .contact_form .contact_form_container .contact_left_sidebar {
+    display: none;
+  }
+  .contact_container .contact_form .contact_form_container .contact_right_form {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Tablet Portrait: */
+@media screen and (max-width: 767px) and (min-width: 544px) {
+  /* your code here */
+  .contact {
+    margin-top: 3rem;
+  }
+  .contact .contact_container {
+    width: 100%;
+  }
+  .contact .contact_container .contact_content {
+    display: none;
+  }
+  .contact_form .contact_form_container .contact_left_sidebar {
+    display: none;
+  }
+  .contact_container .contact_form .contact_form_container .contact_right_form {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Mobile: */
+@media screen and (max-width: 543px) {
+  /* your code here */
+  .contact {
+    margin-top: 3rem;
+  }
+  .contact .contact_container {
+    width: 100%;
+  }
+  .contact .contact_container .contact_content {
+    display: none;
+  }
+  .contact_form .contact_form_container .contact_left_sidebar {
+    display: none;
+  }
+  .contact_container .contact_form .contact_form_container .contact_right_form {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
